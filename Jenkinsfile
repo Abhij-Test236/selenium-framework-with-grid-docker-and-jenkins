@@ -13,7 +13,7 @@ pipeline{
 
         stage('Build Image'){
             steps{
-                sh 'docker build -t=Abhij236/selenium-framework-with-grid-docker-jenkins .'
+                sh 'docker build -t=abhij236/selenium-framework-with-grid-docker-jenkins .'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline{
             steps{
                 // There might be a warning.
                 sh 'docker login -u ${DOCKER_HUB_USR} -p ${DOCKER_HUB_PSW}'
-                sh 'docker push Abhij236/selenium-framework-with-grid-docker-jenkins'
+                sh 'docker push abhij236/selenium-framework-with-grid-docker-jenkins'
             }
         }
 
